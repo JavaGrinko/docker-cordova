@@ -16,4 +16,3 @@ RUN buildDeps='software-properties-common'; \
   apt-get autoremove -y && apt-get clean
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
-ENTRYPOINT [ "cordova" ]
