@@ -14,5 +14,6 @@ RUN buildDeps='software-properties-common'; \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
   apt-get purge -y --auto-remove $buildDeps && \
   apt-get autoremove -y && apt-get clean
+RUN apt-get update && apt-get install -y curl
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
