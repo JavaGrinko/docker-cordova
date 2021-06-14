@@ -15,5 +15,6 @@ RUN buildDeps='software-properties-common'; \
   apt-get purge -y --auto-remove $buildDeps && \
   apt-get autoremove -y && apt-get clean
 RUN apt-get update && apt-get install -y curl
+RUN npm i n -g && n 14.15.0 && npm i npm -g
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
